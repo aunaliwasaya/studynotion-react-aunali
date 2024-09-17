@@ -70,13 +70,14 @@
 //     </>
 //   )
 // }
+
 import { useState } from "react";
 import { VscSignOut } from "react-icons/vsc";
 import SidebarLink from "./SidebarLink";
 import ConfirmationModal from "../../common/ConfirmationModal";
 import { sidebarLinks } from "../../../data/dashboard-links";
 
-export default function Sidebar({ user, onLogout }) {
+export default function Sidebar({ user, handleLogout }) {
   const [confirmationModal, setConfirmationModal] = useState(null);
 
   return (
@@ -115,7 +116,7 @@ export default function Sidebar({ user, onLogout }) {
                 text2: "You will be logged out of your account.",
                 btn1Text: "Logout",
                 btn2Text: "Cancel",
-                btn1Handler: onLogout,
+                btn1Handler: handleLogout,
                 btn2Handler: () => setConfirmationModal(null),
               })
             }

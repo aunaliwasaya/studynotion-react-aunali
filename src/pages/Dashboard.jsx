@@ -166,7 +166,7 @@ function Dashboard() {
 
   return (
     <div className="relative flex min-h-[calc(100vh-3.5rem)]">
-      <Sidebar user={user} onLogout={handleLogout} />
+      <Sidebar user={user} handleLogout={handleLogout} />
       <div className="h-[calc(100vh-3.5rem)] flex-1 overflow-auto text-white">
         <div className="mx-auto w-11/12 max-w-[1000px] py-10">
           <h1 className="text-white">
